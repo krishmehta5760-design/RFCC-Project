@@ -1,0 +1,181 @@
+﻿post d = 0.400 mm: K/Z0 = 0.4793, phi = -52.21 deg
+post d = 0.550 mm: K/Z0 = 0.4299, phi = -47.18 deg
+post d = 0.700 mm: K/Z0 = 0.3802, phi = -41.87 deg
+post d = 0.850 mm: K/Z0 = 0.3506, phi = -38.12 deg
+post d = 1.000 mm: K/Z0 = 0.3159, phi = -34.03 deg
+post d = 1.400 mm: K/Z0 = 0.2402, phi = -23.43 deg
+post d = 1.800 mm: K/Z0 = 0.1850, phi = -14.25 deg
+post d = 2.200 mm: K/Z0 = 0.1391, phi = -5.43 deg
+post d = 2.600 mm: K/Z0 = 0.1050, phi = 2.61 deg
+post d = 3.000 mm: K/Z0 = 0.0782, phi = 10.41 deg
+[n3r002] synthesis: {"g": [1.0, 0.7233035935079521, 1.0389486159974126, 0.7233035935079521, 1.0], "K": [0.4783897049648127, 0.1909531939375134, 0.1909531939375134, 0.4783897049648127], "d": [0.4025903730333099, 1.7516463932337407, 1.7516463932337407, 0.4025903730333099], "phi": [-0.9096651009692742, -0.26804437800447434, -0.26804437800447434, -0.9096651009692742], "L": [10.604326495965628, 11.937004558078259, 10.604326495965628], "lg0": 26.100974982150138}
+it 0: d=[0.4026 1.7516] L=[10.6043 11.937 ]  fc=10.0100  RL20 band=9.735-10.285  RLmin(spec)=22.67  ILmax(spec)=0.48
+[n3r002] FINAL {'it': 0, 'd': [0.4025903730333099, 1.7516463932337407], 'L': [np.float64(10.604326495965628), np.float64(11.937004558078259)], 'f_c': 10.01, 'bw20': 0.5500000000000007, 'IL_f1': 0.45301580086801513, 'IL_f0': 0.4098858242144626, 'IL_f2': 0.44774103825227113, 'RL_f1': 22.66523672483931, 'RL_f0': 30.106634256245776, 'RL_f2': 26.222681488753775, 'IL_min': 0.3751184694882773, 'f_ILmin_GHz': 10.075, 'f3dB_lo_GHz': 9.54, 'f3dB_hi_GHz': 10.57, 'BW3dB_MHz': 1030.0, 'f0_3dB_GHz': 10.055, 'RL20_lo_GHz': 9.735, 'RL20_hi_GHz': 10.285, 'RL_min_band': 22.66523672483931, 'IL_max_band': 0.4757184551750927, 'rej_9GHz': 25.295964379534837, 'rej_11GHz': 12.161068558884995}
+[n3r003] synthesis: {"g": [1.0, 0.7872101787957119, 1.0748548179325363, 0.7872101787957118, 1.0], "K": [0.44297746506966795, 0.16793209806654244, 0.16793209806654247, 0.44297746506966795], "d": [0.5086329881591223, 1.9358474453855543, 1.9358474453855543, 0.5086329881591223], "phi": [-0.8476501777643565, -0.19638111252968732, -0.19638111252968732, -0.8476501777643565], "L": [10.877231087877535, 12.22935856878611, 10.877231087877535], "lg0": 26.089577948608046}
+[improved_n3r003_it0] mesh [396, 103, 5] = 0.20 Mcells, min cell [0.059 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 396x103x5 --> 203940 FDTD cells 
+FDTD timestep is: 1.68889e-13 s; Nyquist rate: 242 timesteps @1.22336e+10 Hz
+Excitation signal length is: 7711 timesteps (1.3023e-09s)
+Max. number of timesteps: 400000 ( --> 51.8739 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+python.exe : Warning: No primitives found in property: copper!
+At line:1 char:439
++ ... n3r002_it0; & "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\pytho ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: No pri...operty: copper!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         1980 || Speed:  100.4 MC/s (2.031e-03 s/TS) || Energy: ~7.25e-18 (- 0.00dB)
+[@        8s] Timestep:         4140 || Speed:  109.0 MC/s (1.871e-03 s/TS) || Energy: ~4.26e-15 (- 0.00dB)
+[@       12s] Timestep:         6240 || Speed:  106.8 MC/s (1.909e-03 s/TS) || Energy: ~3.54e-15 (- 0.81dB)
+[@       16s] Timestep:         8340 || Speed:  105.2 MC/s (1.939e-03 s/TS) || Energy: ~2.46e-15 (- 2.39dB)
+[@       20s] Timestep:        10380 || Speed:  102.2 MC/s (1.996e-03 s/TS) || Energy: ~1.29e-15 (- 5.18dB)
+[@       24s] Timestep:        12420 || Speed:  101.0 MC/s (2.019e-03 s/TS) || Energy: ~3.70e-16 (-10.62dB)
+[@       28s] Timestep:        14400 || Speed:   99.5 MC/s (2.050e-03 s/TS) || Energy: ~9.39e-17 (-16.57dB)
+[@       32s] Timestep:        16320 || Speed:   97.7 MC/s (2.087e-03 s/TS) || Energy: ~7.59e-17 (-17.49dB)
+[@       36s] Timestep:        18300 || Speed:   97.9 MC/s (2.083e-03 s/TS) || Energy: ~3.57e-17 (-20.77dB)
+[@       40s] Timestep:        20220 || Speed:   97.1 MC/s (2.100e-03 s/TS) || Energy: ~1.44e-17 (-24.70dB)
+[@       44s] Timestep:        22140 || Speed:   96.6 MC/s (2.111e-03 s/TS) || Energy: ~6.19e-18 (-28.38dB)
+[@       48s] Timestep:        24060 || Speed:   95.8 MC/s (2.129e-03 s/TS) || Energy: ~3.61e-18 (-30.72dB)
+[@       52s] Timestep:        25980 || Speed:   95.4 MC/s (2.138e-03 s/TS) || Energy: ~1.65e-18 (-34.11dB)
+[@       56s] Timestep:        27900 || Speed:   95.6 MC/s (2.133e-03 s/TS) || Energy: ~6.97e-19 (-37.86dB)
+[@     1m01s] Timestep:        29820 || Speed:   95.1 MC/s (2.145e-03 s/TS) || Energy: ~3.73e-19 (-40.58dB)
+RunFDTD: end-criteria of -40.00dB reached after 29820 timesteps (-40.58dB)
+Time for 29820 iterations with 203940.00 cells : 61.02 sec
+Speed: 99.67 MCells/s 
+it 0: d=[0.5086 1.9358] L=[10.8772 12.2294]  fc=10.0000  RL20 band=9.740-10.260  RLmin(spec)=22.21  ILmax(spec)=0.52
+[n3r003] FINAL {'it': 0, 'd': [0.5086329881591223, 1.9358474453855543], 'L': [np.float64(10.877231087877535), np.float64(12.22935856878611)], 'f_c': 10.0, 'bw20': 0.5199999999999996, 'IL_f1': 0.5185844570220929, 'IL_f0': 0.4270866023122962, 'IL_f2': 0.4965958041785895, 'RL_f1': 22.251948734666772, 'RL_f0': 28.754920865469042, 'RL_f2': 22.214322379003946, 'IL_min': 0.411441708319058, 'f_ILmin_GHz': 10.04, 'f3dB_lo_GHz': 9.58, 'f3dB_hi_GHz': 10.49, 'BW3dB_MHz': 910.0, 'f0_3dB_GHz': 10.035, 'RL20_lo_GHz': 9.74, 'RL20_hi_GHz': 10.26, 'RL_min_band': 22.214322379003946, 'IL_max_band': 0.5185844570220929, 'rej_9GHz': 27.23542888201118, 'rej_11GHz': 15.375012665118602}
+[n4r003] synthesis: {"g": [1.0, 0.8681102420195174, 1.2754007476468237, 1.5062008493246677, 0.73508685923792, 1.1809628088298376], "K": [0.42183202133637754, 0.14680579339017683, 0.11145233981360239, 0.14680579339017683, 0.42183202133637754], "d": [0.573111222150037, 2.124274244361832, 2.514943469148103, 2.124274244361832, 0.573111222150037], "phi": [-0.8091716529237816, -0.12386771391325914, 0.0157490826582235, -0.12386771391325914, -0.8091716529237816], "L": [11.107666153622658, 12.82031927303627, 12.82031927303627, 11.107666153622658], "lg0": 26.089577948608046}
+[improved_n4r003_it0] mesh [440, 111, 5] = 0.24 Mcells, min cell [0.055 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 440x111x5 --> 244200.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 246 timesteps @12203949606.00 Hz
+Excitation signal length is: 7819 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 51.16 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Warning: No primitives found in property: copper!
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         1525 || Speed:   91.0 MC/s (2.682e-03 s/TS) || Energy: ~1.17e-18 (- 0.00dB)
+[@        8s] Timestep:         3050 || Speed:   91.7 MC/s (2.663e-03 s/TS) || Energy: ~7.75e-16 (- 0.00dB)
+[@       12s] Timestep:         4636 || Speed:   93.3 MC/s (2.618e-03 s/TS) || Energy: ~4.04e-15 (- 0.00dB)
+[@       16s] Timestep:         6161 || Speed:   92.1 MC/s (2.652e-03 s/TS) || Energy: ~3.54e-15 (- 0.57dB)
+[@       20s] Timestep:         7747 || Speed:   93.3 MC/s (2.616e-03 s/TS) || Energy: ~2.41e-15 (- 2.26dB)
+[@       24s] Timestep:         9272 || Speed:   92.3 MC/s (2.645e-03 s/TS) || Energy: ~2.12e-15 (- 2.80dB)
+[@       28s] Timestep:        10797 || Speed:   91.9 MC/s (2.657e-03 s/TS) || Energy: ~2.11e-15 (- 2.83dB)
+[@       32s] Timestep:        12322 || Speed:   92.0 MC/s (2.656e-03 s/TS) || Energy: ~1.60e-15 (- 4.02dB)
+[@       36s] Timestep:        13847 || Speed:   92.4 MC/s (2.642e-03 s/TS) || Energy: ~9.88e-16 (- 6.12dB)
+[@       40s] Timestep:        15372 || Speed:   90.8 MC/s (2.691e-03 s/TS) || Energy: ~5.91e-16 (- 8.35dB)
+[@       44s] Timestep:        16897 || Speed:   91.3 MC/s (2.674e-03 s/TS) || Energy: ~3.54e-16 (-10.58dB)
+[@       48s] Timestep:        18422 || Speed:   91.5 MC/s (2.669e-03 s/TS) || Energy: ~1.92e-16 (-13.22dB)
+[@       53s] Timestep:        19947 || Speed:   90.4 MC/s (2.702e-03 s/TS) || Energy: ~1.08e-16 (-15.74dB)
+[@       57s] Timestep:        21472 || Speed:   90.9 MC/s (2.686e-03 s/TS) || Energy: ~7.88e-17 (-17.10dB)
+[@     1m01s] Timestep:        22997 || Speed:   90.6 MC/s (2.694e-03 s/TS) || Energy: ~6.11e-17 (-18.21dB)
+[@     1m05s] Timestep:        24522 || Speed:   90.8 MC/s (2.689e-03 s/TS) || Energy: ~4.23e-17 (-19.80dB)
+[@     1m09s] Timestep:        26047 || Speed:   89.8 MC/s (2.718e-03 s/TS) || Energy: ~3.09e-17 (-21.16dB)
+[@     1m13s] Timestep:        27572 || Speed:   90.4 MC/s (2.702e-03 s/TS) || Energy: ~2.59e-17 (-21.93dB)
+[@     1m17s] Timestep:        29036 || Speed:   89.4 MC/s (2.733e-03 s/TS) || Energy: ~2.44e-17 (-22.19dB)
+[@     1m21s] Timestep:        30561 || Speed:   90.1 MC/s (2.710e-03 s/TS) || Energy: ~1.72e-17 (-23.71dB)
+[@     1m25s] Timestep:        32086 || Speed:   90.5 MC/s (2.697e-03 s/TS) || Energy: ~1.10e-17 (-25.64dB)
+[@     1m29s] Timestep:        33550 || Speed:   88.6 MC/s (2.756e-03 s/TS) || Energy: ~5.24e-18 (-28.87dB)
+[@     1m34s] Timestep:        35075 || Speed:   90.1 MC/s (2.709e-03 s/TS) || Energy: ~3.75e-18 (-30.33dB)
+[@     1m38s] Timestep:        36539 || Speed:   87.9 MC/s (2.777e-03 s/TS) || Energy: ~4.06e-18 (-29.99dB)
+[@     1m42s] Timestep:        38003 || Speed:   86.8 MC/s (2.812e-03 s/TS) || Energy: ~3.51e-18 (-30.61dB)
+[@     1m46s] Timestep:        39528 || Speed:   89.6 MC/s (2.726e-03 s/TS) || Energy: ~2.40e-18 (-32.27dB)
+[@     1m50s] Timestep:        40870 || Speed:   80.9 MC/s (3.020e-03 s/TS) || Energy: ~1.69e-18 (-33.79dB)
+[@     1m54s] Timestep:        42395 || Speed:   90.2 MC/s (2.707e-03 s/TS) || Energy: ~1.38e-18 (-34.68dB)
+[@     1m58s] Timestep:        43859 || Speed:   88.8 MC/s (2.749e-03 s/TS) || Energy: ~9.30e-19 (-36.38dB)
+[@     2m02s] Timestep:        45323 || Speed:   88.5 MC/s (2.759e-03 s/TS) || Energy: ~4.39e-19 (-39.64dB)
+[@     2m06s] Timestep:        46787 || Speed:   89.0 MC/s (2.743e-03 s/TS) || Energy: ~4.29e-19 (-39.74dB)
+[@     2m10s] Timestep:        48251 || Speed:   89.3 MC/s (2.734e-03 s/TS) || Energy: ~4.22e-19 (-39.82dB)
+[@     2m14s] Timestep:        49715 || Speed:   89.2 MC/s (2.736e-03 s/TS) || Energy: ~2.24e-19 (-42.57dB)
+RunFDTD: end-criteria of -40.00dB reached after 49715 timesteps (-42.57dB)
+Time for 49715 iterations with 244200.00 cells : 134.62 sec
+Speed: 90.18 MCells/s 
+it 0: d=[0.5731 2.1243 2.5149] L=[11.1077 12.8203]  fc=10.0225  RL20 band=9.755-10.290  RLmin(spec)=18.47  ILmax(spec)=1.00
+[improved_n4r003_it1] mesh [446, 111, 5] = 0.25 Mcells, min cell [0.053 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 446x111x5 --> 247530.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 199 timesteps @12256351639.00 Hz
+Excitation signal length is: 6353 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 62.96 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+Warning: No primitives found in property: copper!
+[@        4s] Timestep:         1519 || Speed:   93.8 MC/s (2.640e-03 s/TS) || Energy: ~5.00e-18 (- 0.00dB)
+[@        8s] Timestep:         3038 || Speed:   91.6 MC/s (2.702e-03 s/TS) || Energy: ~1.76e-15 (- 0.00dB)
+[@       12s] Timestep:         4557 || Speed:   93.2 MC/s (2.655e-03 s/TS) || Energy: ~2.71e-15 (- 0.00dB)
+[@       16s] Timestep:         6125 || Speed:   94.6 MC/s (2.616e-03 s/TS) || Energy: ~1.85e-15 (- 1.65dB)
+[@       20s] Timestep:         7644 || Speed:   92.8 MC/s (2.666e-03 s/TS) || Energy: ~1.55e-15 (- 2.44dB)
+[@       24s] Timestep:         9065 || Speed:   86.7 MC/s (2.855e-03 s/TS) || Energy: ~1.25e-15 (- 3.35dB)
+[@       28s] Timestep:        10633 || Speed:   94.1 MC/s (2.630e-03 s/TS) || Energy: ~7.86e-16 (- 5.38dB)
+[@       32s] Timestep:        12152 || Speed:   92.3 MC/s (2.681e-03 s/TS) || Energy: ~3.97e-16 (- 8.34dB)
+[@       36s] Timestep:        13671 || Speed:   92.3 MC/s (2.683e-03 s/TS) || Energy: ~1.59e-16 (-12.33dB)
+[@       40s] Timestep:        15190 || Speed:   92.4 MC/s (2.678e-03 s/TS) || Energy: ~9.87e-17 (-14.39dB)
+[@       44s] Timestep:        16709 || Speed:   92.9 MC/s (2.664e-03 s/TS) || Energy: ~5.66e-17 (-16.80dB)
+[@       48s] Timestep:        18179 || Speed:   90.7 MC/s (2.731e-03 s/TS) || Energy: ~4.43e-17 (-17.87dB)
+[@       52s] Timestep:        19698 || Speed:   91.6 MC/s (2.702e-03 s/TS) || Energy: ~3.22e-17 (-19.26dB)
+[@       56s] Timestep:        21217 || Speed:   92.2 MC/s (2.684e-03 s/TS) || Energy: ~1.95e-17 (-21.43dB)
+[@     1m01s] Timestep:        22736 || Speed:   91.2 MC/s (2.715e-03 s/TS) || Energy: ~1.38e-17 (-22.95dB)
+[@     1m05s] Timestep:        24255 || Speed:   91.7 MC/s (2.700e-03 s/TS) || Energy: ~7.92e-18 (-25.34dB)
+[@     1m09s] Timestep:        25774 || Speed:   92.7 MC/s (2.671e-03 s/TS) || Energy: ~5.72e-18 (-26.76dB)
+[@     1m13s] Timestep:        27293 || Speed:   91.7 MC/s (2.700e-03 s/TS) || Energy: ~3.63e-18 (-28.73dB)
+[@     1m17s] Timestep:        28812 || Speed:   91.4 MC/s (2.710e-03 s/TS) || Energy: ~2.57e-18 (-30.23dB)
+[@     1m21s] Timestep:        30331 || Speed:   91.7 MC/s (2.699e-03 s/TS) || Energy: ~1.76e-18 (-31.88dB)
+[@     1m25s] Timestep:        31850 || Speed:   92.9 MC/s (2.665e-03 s/TS) || Energy: ~1.19e-18 (-33.58dB)
+[@     1m29s] Timestep:        33369 || Speed:   91.4 MC/s (2.708e-03 s/TS) || Energy: ~8.57e-19 (-35.00dB)
+[@     1m33s] Timestep:        34888 || Speed:   92.0 MC/s (2.692e-03 s/TS) || Energy: ~5.76e-19 (-36.73dB)
+[@     1m37s] Timestep:        36407 || Speed:   92.5 MC/s (2.675e-03 s/TS) || Energy: ~4.21e-19 (-38.09dB)
+[@     1m41s] Timestep:        37926 || Speed:   91.5 MC/s (2.706e-03 s/TS) || Energy: ~2.88e-19 (-39.73dB)
+[@     1m46s] Timestep:        39396 || Speed:   89.9 MC/s (2.753e-03 s/TS) || Energy: ~1.59e-19 (-42.31dB)
+RunFDTD: end-criteria of -40.00dB reached after 39396 timesteps (-42.31dB)
+Time for 39396 iterations with 247530.00 cells : 106.01 sec
+Speed: 91.99 MCells/s 
+it 1: d=[0.5731 2.1243 2.5149] L=[11.1515 12.8709]  fc=9.9975  RL20 band=9.735-10.260  RLmin(spec)=21.69  ILmax(spec)=0.82
+[n4r003] FINAL {'it': 1, 'd': [0.573111222150037, 2.124274244361832, 2.514943469148103], 'L': [np.float64(11.151472025413735), np.float64(12.870879422632786)], 'f_c': 9.997499999999999, 'bw20': 0.5250000000000004, 'IL_f1': 0.8218163799392868, 'IL_f0': 0.6804478235815496, 'IL_f2': 0.7131774870997041, 'RL_f1': 27.320020206625504, 'RL_f0': 38.50242916981062, 'RL_f2': 25.799322697675144, 'IL_min': 0.6021431268172915, 'f_ILmin_GHz': 10.08, 'f3dB_lo_GHz': 9.655, 'f3dB_hi_GHz': 10.37, 'BW3dB_MHz': 715.0, 'f0_3dB_GHz': 10.0125, 'RL20_lo_GHz': 9.735, 'RL20_hi_GHz': 10.26, 'RL_min_band': 21.693561375792356, 'IL_max_band': 0.8218163799392868, 'rej_9GHz': 46.199159111681595, 'rej_11GHz': 29.748335229872822}

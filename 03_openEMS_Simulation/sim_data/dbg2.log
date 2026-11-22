@@ -1,0 +1,739 @@
+﻿[dbg2] mesh [330, 103, 5] = 0.17 Mcells, min cell [0.073 0.079 0.392] mm
+openEMS - fixed number of threads: 4
+openEMS - verbose level 3
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+python.exe : -----------------------------------------
+At line:1 char:384
++ ... imulation"; & "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\pytho ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (---------------...---------------:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ Property #0 Type: "Material" Name: "RT5870"
+ Primitive Count 	: 1
+ Coordinate System 	: 0
+  -- Primitives: --
+  Primitive #0 Type: "Box" Priority: 1
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-39.7105,-15,0) P2: (39.7105,15,1.57)
+  Transform: None
+  Start: -39.7105,-15,0
+  Stop : 39.7105,15,1.57
+ --- Material --- 
+  Isotropy	: 1
+  Epsilon_R	: 2.33, 1, 1
+  Kappa		: 0.00215029, 0, 0
+  Mue_R		: 1, 1, 1
+  Sigma		: 0, 0, 0
+  Density	: 0
+-----------------------------------------
+ Property #1 Type: "ConductingSheet" Name: "copper"
+ Primitive Count 	: 0
+ Coordinate System 	: 0
+  -- Primitives: --
+ --- Conducting Sheet Properties --- 
+  Conductivity: 5.8e+07
+  Thickness: 3.5e-05
+-----------------------------------------
+ Property #2 Type: "Metal" Name: "PEC"
+ Primitive Count 	: 70
+ Coordinate System 	: 0
+  -- Primitives: --
+  Primitive #1 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-28.39,-8.61165,0) P2: (-27.0695,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -27.7298,-7.9514,0
+  Axis-Stop : -27.7298,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #2 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-26.4093,-8.61165,0) P2: (-25.0888,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -25.7491,-7.9514,0
+  Axis-Stop : -25.7491,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #3 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-24.4287,-8.61165,0) P2: (-23.1081,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -23.7684,-7.9514,0
+  Axis-Stop : -23.7684,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #4 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-22.4479,-8.61165,0) P2: (-21.1274,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -21.7877,-7.9514,0
+  Axis-Stop : -21.7877,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #5 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-20.4672,-8.61165,0) P2: (-19.1467,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -19.807,-7.9514,0
+  Axis-Stop : -19.807,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #6 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-18.4866,-8.61165,0) P2: (-17.166,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -17.8263,-7.9514,0
+  Axis-Stop : -17.8263,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #7 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-16.5058,-8.61165,0) P2: (-15.1853,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -15.8456,-7.9514,0
+  Axis-Stop : -15.8456,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #8 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-14.5251,-8.61165,0) P2: (-13.2046,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -13.8649,-7.9514,0
+  Axis-Stop : -13.8649,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #9 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-12.5444,-8.61165,0) P2: (-11.224,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -11.8842,-7.9514,0
+  Axis-Stop : -11.8842,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #10 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-10.5637,-8.61165,0) P2: (-9.24325,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -9.9035,-7.9514,0
+  Axis-Stop : -9.9035,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #11 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-8.58305,-8.61165,0) P2: (-7.26255,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -7.9228,-7.9514,0
+  Axis-Stop : -7.9228,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #12 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-6.60235,-8.61165,0) P2: (-5.28185,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -5.9421,-7.9514,0
+  Axis-Stop : -5.9421,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #13 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-4.62165,-8.61165,0) P2: (-3.30115,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -3.9614,-7.9514,0
+  Axis-Stop : -3.9614,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #14 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-2.64095,-8.61165,0) P2: (-1.32045,-7.29115,1.57)
+  Transform: None
+  Axis-Start: -1.9807,-7.9514,0
+  Axis-Stop : -1.9807,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #15 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-0.66025,-8.61165,0) P2: (0.66025,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 0,-7.9514,0
+  Axis-Stop : 0,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #16 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (1.32045,-8.61165,0) P2: (2.64095,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 1.9807,-7.9514,0
+  Axis-Stop : 1.9807,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #17 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (3.30115,-8.61165,0) P2: (4.62165,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 3.9614,-7.9514,0
+  Axis-Stop : 3.9614,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #18 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (5.28185,-8.61165,0) P2: (6.60235,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 5.9421,-7.9514,0
+  Axis-Stop : 5.9421,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #19 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (7.26255,-8.61165,0) P2: (8.58305,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 7.9228,-7.9514,0
+  Axis-Stop : 7.9228,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #20 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (9.24325,-8.61165,0) P2: (10.5637,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 9.9035,-7.9514,0
+  Axis-Stop : 9.9035,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #21 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (11.224,-8.61165,0) P2: (12.5444,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 11.8842,-7.9514,0
+  Axis-Stop : 11.8842,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #22 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (13.2046,-8.61165,0) P2: (14.5251,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 13.8649,-7.9514,0
+  Axis-Stop : 13.8649,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #23 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (15.1853,-8.61165,0) P2: (16.5058,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 15.8456,-7.9514,0
+  Axis-Stop : 15.8456,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #24 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (17.166,-8.61165,0) P2: (18.4866,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 17.8263,-7.9514,0
+  Axis-Stop : 17.8263,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #25 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (19.1467,-8.61165,0) P2: (20.4672,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 19.807,-7.9514,0
+  Axis-Stop : 19.807,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #26 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (21.1274,-8.61165,0) P2: (22.4479,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 21.7877,-7.9514,0
+  Axis-Stop : 21.7877,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #27 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (23.1081,-8.61165,0) P2: (24.4287,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 23.7684,-7.9514,0
+  Axis-Stop : 23.7684,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #28 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (25.0888,-8.61165,0) P2: (26.4093,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 25.7491,-7.9514,0
+  Axis-Stop : 25.7491,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #29 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (27.0695,-8.61165,0) P2: (28.39,-7.29115,1.57)
+  Transform: None
+  Axis-Start: 27.7298,-7.9514,0
+  Axis-Stop : 27.7298,-7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #30 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-28.39,7.29115,0) P2: (-27.0695,8.61165,1.57)
+  Transform: None
+  Axis-Start: -27.7298,7.9514,0
+  Axis-Stop : -27.7298,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #31 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-26.4093,7.29115,0) P2: (-25.0888,8.61165,1.57)
+  Transform: None
+  Axis-Start: -25.7491,7.9514,0
+  Axis-Stop : -25.7491,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #32 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-24.4287,7.29115,0) P2: (-23.1081,8.61165,1.57)
+  Transform: None
+  Axis-Start: -23.7684,7.9514,0
+  Axis-Stop : -23.7684,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #33 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-22.4479,7.29115,0) P2: (-21.1274,8.61165,1.57)
+  Transform: None
+  Axis-Start: -21.7877,7.9514,0
+  Axis-Stop : -21.7877,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #34 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-20.4672,7.29115,0) P2: (-19.1467,8.61165,1.57)
+  Transform: None
+  Axis-Start: -19.807,7.9514,0
+  Axis-Stop : -19.807,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #35 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-18.4866,7.29115,0) P2: (-17.166,8.61165,1.57)
+  Transform: None
+  Axis-Start: -17.8263,7.9514,0
+  Axis-Stop : -17.8263,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #36 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-16.5058,7.29115,0) P2: (-15.1853,8.61165,1.57)
+  Transform: None
+  Axis-Start: -15.8456,7.9514,0
+  Axis-Stop : -15.8456,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #37 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-14.5251,7.29115,0) P2: (-13.2046,8.61165,1.57)
+  Transform: None
+  Axis-Start: -13.8649,7.9514,0
+  Axis-Stop : -13.8649,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #38 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-12.5444,7.29115,0) P2: (-11.224,8.61165,1.57)
+  Transform: None
+  Axis-Start: -11.8842,7.9514,0
+  Axis-Stop : -11.8842,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #39 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-10.5637,7.29115,0) P2: (-9.24325,8.61165,1.57)
+  Transform: None
+  Axis-Start: -9.9035,7.9514,0
+  Axis-Stop : -9.9035,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #40 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-8.58305,7.29115,0) P2: (-7.26255,8.61165,1.57)
+  Transform: None
+  Axis-Start: -7.9228,7.9514,0
+  Axis-Stop : -7.9228,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #41 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-6.60235,7.29115,0) P2: (-5.28185,8.61165,1.57)
+  Transform: None
+  Axis-Start: -5.9421,7.9514,0
+  Axis-Stop : -5.9421,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #42 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-4.62165,7.29115,0) P2: (-3.30115,8.61165,1.57)
+  Transform: None
+  Axis-Start: -3.9614,7.9514,0
+  Axis-Stop : -3.9614,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #43 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-2.64095,7.29115,0) P2: (-1.32045,8.61165,1.57)
+  Transform: None
+  Axis-Start: -1.9807,7.9514,0
+  Axis-Stop : -1.9807,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #44 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-0.66025,7.29115,0) P2: (0.66025,8.61165,1.57)
+  Transform: None
+  Axis-Start: 0,7.9514,0
+  Axis-Stop : 0,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #45 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (1.32045,7.29115,0) P2: (2.64095,8.61165,1.57)
+  Transform: None
+  Axis-Start: 1.9807,7.9514,0
+  Axis-Stop : 1.9807,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #46 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (3.30115,7.29115,0) P2: (4.62165,8.61165,1.57)
+  Transform: None
+  Axis-Start: 3.9614,7.9514,0
+  Axis-Stop : 3.9614,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #47 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (5.28185,7.29115,0) P2: (6.60235,8.61165,1.57)
+  Transform: None
+  Axis-Start: 5.9421,7.9514,0
+  Axis-Stop : 5.9421,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #48 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (7.26255,7.29115,0) P2: (8.58305,8.61165,1.57)
+  Transform: None
+  Axis-Start: 7.9228,7.9514,0
+  Axis-Stop : 7.9228,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #49 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (9.24325,7.29115,0) P2: (10.5637,8.61165,1.57)
+  Transform: None
+  Axis-Start: 9.9035,7.9514,0
+  Axis-Stop : 9.9035,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #50 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (11.224,7.29115,0) P2: (12.5444,8.61165,1.57)
+  Transform: None
+  Axis-Start: 11.8842,7.9514,0
+  Axis-Stop : 11.8842,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #51 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (13.2046,7.29115,0) P2: (14.5251,8.61165,1.57)
+  Transform: None
+  Axis-Start: 13.8649,7.9514,0
+  Axis-Stop : 13.8649,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #52 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (15.1853,7.29115,0) P2: (16.5058,8.61165,1.57)
+  Transform: None
+  Axis-Start: 15.8456,7.9514,0
+  Axis-Stop : 15.8456,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #53 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (17.166,7.29115,0) P2: (18.4866,8.61165,1.57)
+  Transform: None
+  Axis-Start: 17.8263,7.9514,0
+  Axis-Stop : 17.8263,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #54 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (19.1467,7.29115,0) P2: (20.4672,8.61165,1.57)
+  Transform: None
+  Axis-Start: 19.807,7.9514,0
+  Axis-Stop : 19.807,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #55 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (21.1274,7.29115,0) P2: (22.4479,8.61165,1.57)
+  Transform: None
+  Axis-Start: 21.7877,7.9514,0
+  Axis-Stop : 21.7877,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #56 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (23.1081,7.29115,0) P2: (24.4287,8.61165,1.57)
+Create FDTD operator (compressed SSE + multi-threading)
+Multithreaded operator using 4 threads.
+  Transform: None
+  Axis-Start: 23.7684,7.9514,0
+  Axis-Stop : 23.7684,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #57 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (25.0888,7.29115,0) P2: (26.4093,8.61165,1.57)
+  Transform: None
+  Axis-Start: 25.7491,7.9514,0
+  Axis-Stop : 25.7491,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #58 Type: "Cylinder" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (27.0695,7.29115,0) P2: (28.39,8.61165,1.57)
+  Transform: None
+  Axis-Start: 27.7298,7.9514,0
+  Axis-Stop : 27.7298,7.9514,1.57
+  Radius: 0.66025
+ ---- 
+  Primitive #59 Type: "Box" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-39.7105,-7.48805,0) P2: (-28.7202,-7.48805,1.57)
+  Transform: None
+  Start: -39.7105,-7.48805,0
+  Stop : -28.7202,-7.48805,1.57
+ ---- 
+  Primitive #60 Type: "Box" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-39.7105,7.48805,0) P2: (-28.7202,7.48805,1.57)
+  Transform: None
+  Start: -39.7105,7.48805,0
+  Stop : -28.7202,7.48805,1.57
+ ---- 
+  Primitive #61 Type: "Box" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (28.7202,-7.48805,0) P2: (39.7105,-7.48805,1.57)
+  Transform: None
+  Start: 28.7202,-7.48805,0
+  Stop : 39.7105,-7.48805,1.57
+ ---- 
+  Primitive #62 Type: "Box" Priority: 20
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (28.7202,7.48805,0) P2: (39.7105,7.48805,1.57)
+  Transform: None
+  Start: 28.7202,7.48805,0
+  Stop : 39.7105,7.48805,1.57
+ ---- 
+  Primitive #63 Type: "Box" Priority: 30
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-17.0744,-7.9514,0) P2: (-17.0744,-3.2523,1.57)
+  Transform: None
+  Start: -17.0744,-7.9514,0
+  Stop : -17.0744,-3.2523,1.57
+ ---- 
+  Primitive #64 Type: "Box" Priority: 30
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-17.0744,3.2523,0) P2: (-17.0744,7.9514,1.57)
+  Transform: None
+  Start: -17.0744,3.2523,0
+  Stop : -17.0744,7.9514,1.57
+ ---- 
+  Primitive #65 Type: "Box" Priority: 30
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-6.0021,-7.9514,0) P2: (-6.0021,-2.0401,1.57)
+  Transform: None
+  Start: -6.0021,-7.9514,0
+  Stop : -6.0021,-2.0401,1.57
+ ---- 
+  Primitive #66 Type: "Box" Priority: 30
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-6.0021,2.0401,0) P2: (-6.0021,7.9514,1.57)
+  Transform: None
+  Start: -6.0021,2.0401,0
+  Stop : -6.0021,7.9514,1.57
+ ---- 
+  Primitive #67 Type: "Box" Priority: 30
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (6.0021,-7.9514,0) P2: (6.0021,-2.0401,1.57)
+  Transform: None
+  Start: 6.0021,-7.9514,0
+  Stop : 6.0021,-2.0401,1.57
+ ---- 
+  Primitive #68 Type: "Box" Priority: 30
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (6.0021,2.0401,0) P2: (6.0021,7.9514,1.57)
+  Transform: None
+  Start: 6.0021,2.0401,0
+  Stop : 6.0021,7.9514,1.57
+ ---- 
+  Primitive #69 Type: "Box" Priority: 30
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (17.0744,-7.9514,0) P2: (17.0744,-3.2523,1.57)
+  Transform: None
+  Start: 17.0744,-7.9514,0
+  Stop : 17.0744,-3.2523,1.57
+ ---- 
+  Primitive #70 Type: "Box" Priority: 30
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (17.0744,3.2523,0) P2: (17.0744,7.9514,1.57)
+  Transform: None
+  Start: 17.0744,3.2523,0
+  Stop : 17.0744,7.9514,1.57
+-----------------------------------------
+ Property #3 Type: "Excitation" Name: "port_excite_1"
+ Primitive Count 	: 1
+ Coordinate System 	: 0
+  -- Primitives: --
+  Primitive #71 Type: "Box" Priority: 0
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-34.7105,-7.48805,0) P2: (-34.7105,7.48805,1.57)
+  Transform: None
+  Start: -34.7105,-7.48805,0
+  Stop : -34.7105,7.48805,1.57
+ --- Excitation Properties --- 
+  Type: 0
+  Enabled: 1
+  Active directions: 1,1,1
+  Excitation	: 0, 1, 1
+  Weighting	: 0, 0, -0.06677301408338238*sin(0.2097736105024019*y)*cos(0.0*z)
+  Propagation Dir: 0, 0, 0
+  Delay		: 0
+-----------------------------------------
+ Property #4 Type: "ProbeBox" Name: "port_ut_1"
+ Primitive Count 	: 1
+ Coordinate System 	: 0
+  -- Primitives: --
+  Primitive #72 Type: "Box" Priority: 0
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-33.7105,-7.48805,0) P2: (-33.7105,7.48805,1.57)
+  Transform: None
+  Start: -33.7105,-7.48805,0
+  Stop : -33.7105,7.48805,1.57
+-----------------------------------------
+ Property #5 Type: "ProbeBox" Name: "port_it_1"
+ Primitive Count 	: 1
+ Coordinate System 	: 0
+  -- Primitives: --
+  Primitive #73 Type: "Box" Priority: 0
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (-33.7105,-7.48805,0) P2: (-33.7105,7.48805,1.57)
+  Transform: None
+  Start: -33.7105,-7.48805,0
+  Stop : -33.7105,7.48805,1.57
+-----------------------------------------
+ Property #6 Type: "ProbeBox" Name: "port_ut_2"
+ Primitive Count 	: 1
+ Coordinate System 	: 0
+  -- Primitives: --
+  Primitive #74 Type: "Box" Priority: 0
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (33.7105,-7.48805,0) P2: (33.7105,7.48805,1.57)
+  Transform: None
+  Start: 33.7105,-7.48805,0
+  Stop : 33.7105,7.48805,1.57
+-----------------------------------------
+ Property #7 Type: "ProbeBox" Name: "port_it_2"
+ Primitive Count 	: 1
+ Coordinate System 	: 0
+  -- Primitives: --
+  Primitive #75 Type: "Box" Priority: 0
+  Primary Coord-System: 2 Mesh Coord-System: 0 Bound-Box Coord-System: 0
+  Bounding Box (Valid: 1): P1: (33.7105,-7.48805,0) P2: (33.7105,7.48805,1.57)
+  Transform: None
+  Start: 33.7105,-7.48805,0
+  Stop : 33.7105,7.48805,1.57
+Operator::CalcTimestep_Var3: Smallest timestep (2.7034e-13s) found at position: 0 : 140;91;0
+Compressing the FDTD operator... this may take a while...
+Operator::CalcGaussianPulsExcitation: Requested excitation pusle would be 4817 timesteps or 1.30223e-09 s long. 
+Cutting to max number of timesteps!
+------- Stat: FDTD Operator -------
+Dimensions		: 330x103x5 = 169950 Cells (0.16995 MCells)
+Size of Operator	: 8157600 Byte (7.77969 MiB) 
+Size of Field-Data	: 4078800 Byte (3.88985 MiB) 
+-----------------------------------
+Background materials (epsR/mueR/kappa/sigma): 1/1/0/0
+-----------------------------------
+Number of PEC edges	: 31218
+in x direction		: 11730
+in y direction		: 10280
+in z direction		: 9208
+-----------------------------------
+Timestep (s)		: 2.7034e-13
+Timestep method name	: Rennings_2
+Nyquist criteria (TS)	: 151
+Nyquist criteria (s)	: 4.08214e-11
+-----------------------------------
+SSE compression enabled	: yes
+Unique SSE operators	: 9192
+-----------------------------------
+-----------------------------------
+--- Excitation Extension ---
+Voltage excitations	: 312	 (0, 0, 312)
+Current excitations	: 0	 (0, 0, 0)
+Excitation Length (TS)	: 300
+Excitation Length (s)	: 8.11021e-11
+--- Mur ABC Extension ---
+ Active direction	: y at line: 0
+--- Mur ABC Extension ---
+ Active direction	: y at line: 102
+--- Uniaxial PML Extension ---
+ PML range		: [0,0,0] to [8,102,4]
+ Grading function	: " -log(1e-6)*log(2.5)/(2*dl*Z*(pow(2.5,W/dl)-1)) * pow(2.5, D/dl) "
+--- Uniaxial PML Extension ---
+ PML range		: [321,0,0] to [329,102,4]
+ Grading function	: " -log(1e-6)*log(2.5)/(2*dl*Z*(pow(2.5,W/dl)-1)) * pow(2.5, D/dl) "
+-----------------------------------
+Creation time for operator: 5.19681 s
+FDTD simulation size: 330x103x5 --> 169950 FDTD cells 
+FDTD timestep is: 2.7034e-13 s; Nyquist rate: 151 timesteps @1.22485e+10 Hz
+Excitation signal length is: 300 timesteps (8.11021e-11s)
+Max. number of timesteps: 300 ( --> 1 * Excitation signal length)
+openEMS::SetupFDTD: Warning, max. number of timesteps is smaller than three times the excitation. 
+	You may want to choose a higher number of max. timesteps... 
+Create FDTD engine (compressed SSE + multi-threading)
+---  Engine::SortExtensionByPriority() ---
+ #0: Uniaxial PML Extension (1000000)
+ #1: Uniaxial PML Extension (1000000)
+ #2: Mur ABC Extension (0)
+ #3: Mur ABC Extension (0)
+ #4: Excitation Extension (-1000)
+Multithreaded engine using 4 threads. Utilization: (83;83;82;82)
+Setting up processing...
+openEMS::SetupProcessing: probe 'port_ut_1': time-domain sampling every 37 timestep(s) (Nyquist/4)
+openEMS::SetupProcessing: probe 'port_it_1': time-domain sampling every 37 timestep(s) (Nyquist/4)
+openEMS::SetupProcessing: probe 'port_ut_2': time-domain sampling every 37 timestep(s) (Nyquist/4)
+openEMS::SetupProcessing: probe 'port_it_2': time-domain sampling every 37 timestep(s) (Nyquist/4)
+Warning: No primitives found in property: copper!
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+RunFDTD: Warning: Max. number of timesteps was reached before the end-criteria of -40dB was reached... 
+	You may want to choose a higher number of max. timesteps... 
+Time for 300 iterations with 169950 cells : 0.779335 sec
+Speed: 65.4212 MCells/s 
+cleanup: removing C:\Users\KRISH MEHTA\Desktop\SIW_Filter_Xband_openEMS\03_openEMS_Simulation\sim_data\dbg2\et
+cleanup: removing C:\Users\KRISH MEHTA\Desktop\SIW_Filter_Xband_openEMS\03_openEMS_Simulation\sim_data\dbg2\ht
+cleanup: removing C:\Users\KRISH MEHTA\Desktop\SIW_Filter_Xband_openEMS\03_openEMS_Simulation\sim_data\dbg2\port_ut_1
+cleanup: removing C:\Users\KRISH MEHTA\Desktop\SIW_Filter_Xband_openEMS\03_openEMS_Simulation\sim_data\dbg2\port_ut_2
+cleanup: removing C:\Users\KRISH MEHTA\Desktop\SIW_Filter_Xband_openEMS\03_openEMS_Simulation\sim_data\dbg2\port_it_1
+cleanup: removing C:\Users\KRISH MEHTA\Desktop\SIW_Filter_Xband_openEMS\03_openEMS_Simulation\sim_data\dbg2\port_it_2

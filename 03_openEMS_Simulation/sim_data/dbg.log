@@ -1,0 +1,124 @@
+﻿[dbg_line] mesh [336, 91, 13] = 0.40 Mcells, min cell [0.22  0.054 0.392] mm
+openEMS - fixed number of threads: 4
+openEMS - verbose level 1
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+Multithreaded operator using 4 threads.
+Compressing the FDTD operator... this may take a while...
+python.exe : Operator::CalcGaussianPulsExcitation: Requested excitation pusle would be 6467 timesteps or 1.30221e-09 s 
+long. Cutting to max number of timesteps!
+At line:1 char:384
++ ... imulation"; & "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\pytho ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operator::CalcG...r of timesteps!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+------- Stat: FDTD Operator -------
+Dimensions		: 336x91x13 = 397488 Cells (0.397488 MCells)
+Size of Operator	: 19079424 Byte (18.1956 MiB) 
+Size of Field-Data	: 9539712 Byte (9.09778 MiB) 
+-----------------------------------
+Background materials (epsR/mueR/kappa/sigma): 1/1/0/0
+-----------------------------------
+Number of PEC edges	: 37410
+in x direction		: 14842
+in y direction		: 13384
+in z direction		: 9184
+-----------------------------------
+Timestep (s)		: 2.01363e-13
+Timestep method name	: Rennings_2
+Nyquist criteria (TS)	: 203
+Nyquist criteria (s)	: 4.08766e-11
+-----------------------------------
+SSE compression enabled	: yes
+Unique SSE operators	: 1699
+-----------------------------------
+-----------------------------------
+--- Excitation Extension ---
+Voltage excitations	: 184	 (0, 0, 184)
+Current excitations	: 0	 (0, 0, 0)
+Excitation Length (TS)	: 3000
+Excitation Length (s)	: 6.04088e-10
+--- Mur ABC Extension ---
+ Active direction	: y at line: 0
+--- Mur ABC Extension ---
+ Active direction	: y at line: 90
+--- Mur ABC Extension ---
+ Active direction	: z at line: 0
+--- Mur ABC Extension ---
+ Active direction	: z at line: 12
+--- Uniaxial PML Extension ---
+ PML range		: [0,0,0] to [8,90,12]
+ Grading function	: " -log(1e-6)*log(2.5)/(2*dl*Z*(pow(2.5,W/dl)-1)) * pow(2.5, D/dl) "
+--- Uniaxial PML Extension ---
+ PML range		: [327,0,0] to [335,90,12]
+ Grading function	: " -log(1e-6)*log(2.5)/(2*dl*Z*(pow(2.5,W/dl)-1)) * pow(2.5, D/dl) "
+--- Conducting Sheet Extension ---
+ Max. Dispersion Order N = 2
+ N=0:	 Active cells		: 43932
+ N=0:	 Voltage ADE is 	: On
+ N=0:	 Voltage Lor-ADE is 	: Off
+ N=0:	 Current ADE is 	: Off
+ N=0:	 Current Lor-ADE is 	: Off
+ N=1:	 Active cells		: 43932
+ N=1:	 Voltage ADE is 	: On
+ N=1:	 Voltage Lor-ADE is 	: Off
+ N=1:	 Current ADE is 	: Off
+ N=1:	 Current Lor-ADE is 	: Off
+-----------------------------------
+Creation time for operator: 7.26015 s
+FDTD simulation size: 336x91x13 --> 397488 FDTD cells 
+FDTD timestep is: 2.01363e-13 s; Nyquist rate: 203 timesteps @1.22319e+10 Hz
+Excitation signal length is: 3000 timesteps (6.04088e-10s)
+Max. number of timesteps: 3000 ( --> 1 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+openEMS::SetupFDTD: Warning, max. number of timesteps is smaller than three times the excitation. 
+	You may want to choose a higher number of max. timesteps... 
+Multithreaded engine using 4 threads. Utilization: (84;84;84;84)
+Setting up processing...
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:          550 || Speed:   51.0 MC/s (7.798e-03 s/TS) || Energy: ~1.35e-21 (- 0.00dB)
+[@        8s] Timestep:         1050 || Speed:   47.8 MC/s (8.307e-03 s/TS) || Energy: ~1.06e-19 (- 0.00dB)
+[@       12s] Timestep:         1550 || Speed:   48.7 MC/s (8.165e-03 s/TS) || Energy: ~3.63e-18 (- 0.00dB)
+[@       16s] Timestep:         2050 || Speed:   47.9 MC/s (8.302e-03 s/TS) || Energy: ~5.59e-17 (- 0.00dB)
+[@       20s] Timestep:         2550 || Speed:   47.2 MC/s (8.423e-03 s/TS) || Energy: ~3.95e-16 (- 0.00dB)
+Time for 3000 iterations with 397488.00 cells : 24.74 sec
+Speed: 48.20 MCells/s 
+RunFDTD: Warning: Max. number of timesteps was reached before the end-criteria of -40dB was reached... 
+	You may want to choose a higher number of max. timesteps... 
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+    r = build_and_run(dict(name='dbg_line', kind='line', feed='wg', NrTS=3000), 'sim_data', verbose=1)
+  File "C:\Users\KRISH MEHTA\Desktop\SIW_Filter_Xband_openEMS\03_openEMS_Simulation\siw_model.py", line 258, in 
+build_and_run
+    p.CalcPort(sim_path, freq, ref_impedance=Zte)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\Lib\site-packages\openEMS\ports.py", line 627, in CalcPort
+    super(WaveguidePort, self).CalcPort(sim_path, freq, ref_impedance, ref_plane_shift, signal_type)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\Lib\site-packages\openEMS\ports.py", line 210, in CalcPort
+    self.ReadUIData(sim_path, freq, signal_type)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\Lib\site-packages\openEMS\ports.py", line 165, in ReadUIData
+    self.u_data = UI_data(self.U_filenames, sim_path, freq, signal_type )
+                  ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\Lib\site-packages\openEMS\ports.py", line 70, in __init__
+    data, col_names = _load_ui_file(os.path.join(path, fn))
+                      ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\Lib\site-packages\openEMS\ports.py", line 38, in _load_ui_file
+    with open(filepath) as f:
+         ~~~~^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'sim_data\\dbg_line\\port_ut_1'

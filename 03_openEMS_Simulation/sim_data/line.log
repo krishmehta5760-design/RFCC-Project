@@ -1,0 +1,86 @@
+﻿[siw_line] mesh [304, 69, 5] = 0.10 Mcells, min cell [0.22  0.079 0.392] mm
+openEMS - fixed number of threads: 4
+openEMS - verbose level 1
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+Multithreaded operator using 4 threads.
+Compressing the FDTD operator... this may take a while...
+------- Stat: FDTD Operator -------
+Dimensions		: 304x69x5 = 104880 Cells (0.10488 MCells)
+Size of Operator	: 5034240 Byte (4.80103 MiB) 
+Size of Field-Data	: 2517120 Byte (2.40051 MiB) 
+-----------------------------------
+Background materials (epsR/mueR/kappa/sigma): 1/1/0/0
+-----------------------------------
+Number of PEC edges	: 26006
+in x direction		: 10590
+in y direction		: 8120
+in z direction		: 7296
+-----------------------------------
+Timestep (s)		: 4.19538e-13
+Timestep method name	: Rennings_2
+Nyquist criteria (TS)	: 97
+Nyquist criteria (s)	: 4.06952e-11
+-----------------------------------
+SSE compression enabled	: yes
+Unique SSE operators	: 1312
+-----------------------------------
+-----------------------------------
+--- Excitation Extension ---
+Voltage excitations	: 176	 (0, 0, 176)
+Current excitations	: 0	 (0, 0, 0)
+Excitation Length (TS)	: 3104
+Excitation Length (s)	: 1.30225e-09
+--- Mur ABC Extension ---
+ Active direction	: y at line: 0
+--- Mur ABC Extension ---
+ Active direction	: y at line: 68
+--- Uniaxial PML Extension ---
+ PML range		: [0,0,0] to [8,68,4]
+ Grading function	: " -log(1e-6)*log(2.5)/(2*dl*Z*(pow(2.5,W/dl)-1)) * pow(2.5, D/dl) "
+--- Uniaxial PML Extension ---
+ PML range		: [295,0,0] to [303,68,4]
+ Grading function	: " -log(1e-6)*log(2.5)/(2*dl*Z*(pow(2.5,W/dl)-1)) * pow(2.5, D/dl) "
+-----------------------------------
+Creation time for operator: 3.69323 s
+FDTD simulation size: 304x69x5 --> 104880 FDTD cells 
+FDTD timestep is: 4.19538e-13 s; Nyquist rate: 97 timesteps @1.22865e+10 Hz
+Excitation signal length is: 3104 timesteps (1.30225e-09s)
+Max. number of timesteps: 400000 ( --> 128.866 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Multithreaded engine using 4 threads. Utilization: (76;76;76;76)
+python.exe : Warning: No primitives found in property: copper!
+At line:1 char:499
++ ... lyContinue; & "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\pytho ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: No pri...operty: copper!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Setting up processing...
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         1824 || Speed:   47.6 MC/s (2.203e-03 s/TS) || Energy: ~5.13e-16 (- 0.00dB)
+[@        8s] Timestep:         3768 || Speed:   50.6 MC/s (2.073e-03 s/TS) || Energy: ~6.55e-20 (-38.94dB)
+[@       12s] Timestep:         5712 || Speed:   50.8 MC/s (2.063e-03 s/TS) || Energy: ~1.05e-19 (-36.90dB)
+[@       16s] Timestep:         7632 || Speed:   50.1 MC/s (2.095e-03 s/TS) || Energy: ~1.91e-20 (-44.28dB)
+RunFDTD: end-criteria of -40.00dB reached after 7632 timesteps (-44.28dB)
+Time for 7632 iterations with 104880.00 cells : 16.08 sec
+Speed: 49.77 MCells/s 
+{'name': 'siw_line', 'ncells': [304, 69, 5], 'total_cells': 104880, 'runtime_s': 19.8}
+  8.0 GHz  S11 =  -40.11 dB   S21 =  -0.250 dB
+  9.0 GHz  S11 =  -42.38 dB   S21 =  -0.226 dB
+ 10.0 GHz  S11 =  -48.39 dB   S21 =  -0.204 dB
+ 11.0 GHz  S11 =  -55.55 dB   S21 =  -0.194 dB
+ 12.0 GHz  S11 =  -61.00 dB   S21 =  -0.183 dB

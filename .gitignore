@@ -1,0 +1,9 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Throw-away output of the live demo (demo_live.py)
+03_openEMS_Simulation/sim_data_demo/
+
+# Word lock files
+~$*

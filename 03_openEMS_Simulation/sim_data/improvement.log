@@ -1,0 +1,396 @@
+﻿[xpost_d0.400] mesh [199, 85, 5] = 0.08 Mcells, min cell [0.056 0.056 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 199x85x5 --> 84575 FDTD cells 
+FDTD timestep is: 2.01487e-13 s; Nyquist rate: 203 timesteps @1.22244e+10 Hz
+Excitation signal length is: 6463 timesteps (1.30221e-09s)
+Max. number of timesteps: 400000 ( --> 61.8908 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+python.exe : Warning: No primitives found in property: PEC_plate!
+At line:1 char:384
++ ... imulation"; & "C:\Users\KRISH MEHTA\openEMS_install\py313\tools\pytho ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: No pri...rty: PEC_plate!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[@        4s] Timestep:         3000 || Speed:   63.4 MC/s (1.334e-03 s/TS) || Energy: ~1.48e-15 (- 0.00dB)
+[@        8s] Timestep:         5700 || Speed:   56.9 MC/s (1.486e-03 s/TS) || Energy: ~1.83e-16 (-10.14dB)
+[@       12s] Timestep:         8650 || Speed:   62.0 MC/s (1.365e-03 s/TS) || Energy: ~4.74e-19 (-36.01dB)
+[@       16s] Timestep:        12000 || Speed:   69.9 MC/s (1.211e-03 s/TS) || Energy: ~1.02e-20 (-52.65dB)
+RunFDTD: end-criteria of -40.00dB reached after 12000 timesteps (-52.65dB)
+Time for 12000 iterations with 84575.00 cells : 16.09 sec
+Speed: 63.06 MCells/s 
+post d = 0.400 mm: K/Z0 = 0.4793, phi = -52.21 deg
+[xpost_d0.550] mesh [199, 87, 5] = 0.09 Mcells, min cell [0.055 0.058 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 199x87x5 --> 86565.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 196 timesteps @12239153706.00 Hz
+Excitation signal length is: 6248 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 64.02 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+Warning: No primitives found in property: PEC_plate!
+[@        4s] Timestep:         3124 || Speed:   67.0 MC/s (1.292e-03 s/TS) || Energy: ~1.83e-15 (- 0.00dB)
+[@        8s] Timestep:         6370 || Speed:   69.6 MC/s (1.243e-03 s/TS) || Energy: ~8.07e-19 (-33.56dB)
+[@       12s] Timestep:         9604 || Speed:   69.3 MC/s (1.249e-03 s/TS) || Energy: ~2.21e-19 (-39.19dB)
+[@       16s] Timestep:        12789 || Speed:   68.8 MC/s (1.259e-03 s/TS) || Energy: ~2.65e-20 (-48.39dB)
+RunFDTD: end-criteria of -40.00dB reached after 12789 timesteps (-48.39dB)
+Time for 12789 iterations with 86565.00 cells : 16.12 sec
+Speed: 68.67 MCells/s 
+post d = 0.550 mm: K/Z0 = 0.4299, phi = -47.18 deg
+[xpost_d0.700] mesh [202, 90, 5] = 0.09 Mcells, min cell [0.05  0.05  0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 202x90x5 --> 90900.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 214 timesteps @12256338063.00 Hz
+Excitation signal length is: 6831 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 58.56 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Warning: No primitives found in property: PEC_plate!
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         3074 || Speed:   69.8 MC/s (1.302e-03 s/TS) || Energy: ~8.18e-16 (- 0.00dB)
+[@        8s] Timestep:         6148 || Speed:   68.4 MC/s (1.328e-03 s/TS) || Energy: ~1.03e-16 (-13.46dB)
+[@       12s] Timestep:         9169 || Speed:   68.2 MC/s (1.333e-03 s/TS) || Energy: ~5.66e-19 (-36.06dB)
+[@       16s] Timestep:        12084 || Speed:   65.0 MC/s (1.399e-03 s/TS) || Energy: ~1.62e-19 (-41.51dB)
+RunFDTD: end-criteria of -40.00dB reached after 12084 timesteps (-41.51dB)
+Time for 12084 iterations with 90900.00 cells : 16.19 sec
+Speed: 67.85 MCells/s 
+post d = 0.700 mm: K/Z0 = 0.3802, phi = -41.87 deg
+[xpost_d0.850] mesh [204, 91, 5] = 0.09 Mcells, min cell [0.059 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 204x91x5 --> 92820.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 195 timesteps @12211277397.00 Hz
+Excitation signal length is: 6202 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 64.50 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Warning: No primitives found in property: PEC_plate!
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         2976 || Speed:   68.0 MC/s (1.365e-03 s/TS) || Energy: ~1.24e-15 (- 0.00dB)
+[@        8s] Timestep:         5904 || Speed:   67.6 MC/s (1.372e-03 s/TS) || Energy: ~1.66e-17 (-20.65dB)
+[@       12s] Timestep:         8832 || Speed:   67.6 MC/s (1.374e-03 s/TS) || Energy: ~1.68e-19 (-40.61dB)
+RunFDTD: end-criteria of -40.00dB reached after 8832 timesteps (-40.61dB)
+Time for 8832 iterations with 92820.00 cells : 12.10 sec
+Speed: 67.73 MCells/s 
+post d = 0.850 mm: K/Z0 = 0.3506, phi = -38.12 deg
+[xpost_d1.000] mesh [207, 94, 5] = 0.10 Mcells, min cell [0.05  0.05  0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 207x94x5 --> 97290.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 214 timesteps @12256338063.00 Hz
+Excitation signal length is: 6831 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 58.56 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Warning: No primitives found in property: PEC_plate!
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         2703 || Speed:   65.7 MC/s (1.480e-03 s/TS) || Energy: ~5.64e-16 (- 0.00dB)
+[@        8s] Timestep:         5300 || Speed:   62.3 MC/s (1.562e-03 s/TS) || Energy: ~1.35e-15 (- 2.61dB)
+[@       12s] Timestep:         8162 || Speed:   69.2 MC/s (1.406e-03 s/TS) || Energy: ~9.56e-20 (-44.09dB)
+RunFDTD: end-criteria of -40.00dB reached after 8162 timesteps (-44.09dB)
+Time for 8162 iterations with 97290.00 cells : 12.08 sec
+Speed: 65.73 MCells/s 
+post d = 1.000 mm: K/Z0 = 0.3159, phi = -34.03 deg
+[xpost_d1.400] mesh [211, 99, 5] = 0.10 Mcells, min cell [0.059 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 211x99x5 --> 104445.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 193 timesteps @12240099818.00 Hz
+Excitation signal length is: 6153 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 65.01 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+Warning: No primitives found in property: PEC_plate!
+[@        4s] Timestep:         2640 || Speed:   68.4 MC/s (1.527e-03 s/TS) || Energy: ~1.03e-15 (- 0.00dB)
+[@        8s] Timestep:         5424 || Speed:   71.7 MC/s (1.457e-03 s/TS) || Energy: ~1.36e-16 (-12.07dB)
+[@       12s] Timestep:         8160 || Speed:   70.9 MC/s (1.473e-03 s/TS) || Energy: ~1.14e-19 (-42.83dB)
+RunFDTD: end-criteria of -40.00dB reached after 8160 timesteps (-42.83dB)
+Time for 8160 iterations with 104445.00 cells : 12.12 sec
+Speed: 70.33 MCells/s 
+post d = 1.400 mm: K/Z0 = 0.2402, phi = -23.43 deg
+[xpost_d1.800] mesh [216, 105, 5] = 0.11 Mcells, min cell [0.053 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 216x105x5 --> 113400.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 203 timesteps @12220579058.00 Hz
+Excitation signal length is: 6461 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 61.91 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Warning: No primitives found in property: PEC_plate!
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         2400 || Speed:   67.4 MC/s (1.681e-03 s/TS) || Energy: ~1.74e-16 (- 0.00dB)
+[@        8s] Timestep:         4850 || Speed:   69.2 MC/s (1.639e-03 s/TS) || Energy: ~1.46e-15 (- 2.60dB)
+[@       12s] Timestep:         7250 || Speed:   67.2 MC/s (1.686e-03 s/TS) || Energy: ~5.95e-19 (-36.49dB)
+[@       16s] Timestep:         9250 || Speed:   55.2 MC/s (2.054e-03 s/TS) || Energy: ~5.08e-20 (-47.18dB)
+RunFDTD: end-criteria of -40.00dB reached after 9250 timesteps (-47.18dB)
+Time for 9250 iterations with 113400.00 cells : 16.21 sec
+Speed: 64.72 MCells/s 
+post d = 1.800 mm: K/Z0 = 0.1850, phi = -14.25 deg
+[xpost_d2.200] mesh [221, 111, 5] = 0.12 Mcells, min cell [0.059 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 221x111x5 --> 122655.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 195 timesteps @12211277397.00 Hz
+Excitation signal length is: 6202 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 64.50 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Warning: No primitives found in property: PEC_plate!
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         2400 || Speed:   73.0 MC/s (1.679e-03 s/TS) || Energy: ~5.35e-16 (- 0.00dB)
+[@        8s] Timestep:         4800 || Speed:   73.0 MC/s (1.679e-03 s/TS) || Energy: ~1.41e-15 (- 2.83dB)
+[@       12s] Timestep:         7200 || Speed:   73.2 MC/s (1.675e-03 s/TS) || Energy: ~6.50e-19 (-36.19dB)
+[@       16s] Timestep:         9600 || Speed:   73.6 MC/s (1.667e-03 s/TS) || Energy: ~5.77e-20 (-46.70dB)
+RunFDTD: end-criteria of -40.00dB reached after 9600 timesteps (-46.70dB)
+Time for 9600 iterations with 122655.00 cells : 16.08 sec
+Speed: 73.22 MCells/s 
+post d = 2.200 mm: K/Z0 = 0.1391, phi = -5.43 deg
+[xpost_d2.600] mesh [225, 117, 5] = 0.13 Mcells, min cell [0.06  0.06  0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 225x117x5 --> 131625.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 193 timesteps @12206190804.00 Hz
+Excitation signal length is: 6136 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 65.19 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+Warning: No primitives found in property: PEC_plate!
+[@        4s] Timestep:         2304 || Speed:   75.4 MC/s (1.746e-03 s/TS) || Energy: ~2.41e-16 (- 0.00dB)
+[@        8s] Timestep:         4656 || Speed:   75.7 MC/s (1.740e-03 s/TS) || Energy: ~1.00e-15 (- 4.56dB)
+[@       12s] Timestep:         7008 || Speed:   76.1 MC/s (1.730e-03 s/TS) || Energy: ~1.02e-19 (-44.50dB)
+RunFDTD: end-criteria of -40.00dB reached after 7008 timesteps (-44.50dB)
+Time for 7008 iterations with 131625.00 cells : 12.18 sec
+Speed: 75.71 MCells/s 
+post d = 2.600 mm: K/Z0 = 0.1050, phi = 2.61 deg
+[xpost_d3.000] mesh [230, 121, 5] = 0.14 Mcells, min cell [0.055 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 230x121x5 --> 139150.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 199 timesteps @12225501086.00 Hz
+Excitation signal length is: 6337 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 63.12 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+Warning: No primitives found in property: PEC_plate!
+[@        4s] Timestep:         2352 || Speed:   80.7 MC/s (1.724e-03 s/TS) || Energy: ~1.85e-16 (- 0.00dB)
+[@        8s] Timestep:         4508 || Speed:   74.8 MC/s (1.859e-03 s/TS) || Energy: ~1.54e-15 (- 3.19dB)
+[@       12s] Timestep:         6811 || Speed:   79.2 MC/s (1.756e-03 s/TS) || Energy: ~1.37e-19 (-43.69dB)
+RunFDTD: end-criteria of -40.00dB reached after 6811 timesteps (-43.69dB)
+Time for 6811 iterations with 139150.00 cells : 12.11 sec
+Speed: 78.28 MCells/s 
+post d = 3.000 mm: K/Z0 = 0.0782, phi = 10.41 deg
+synthesis: {
+ "g": [
+  1.0,
+  0.7233035935079521,
+  1.0389486159974126,
+  0.7233035935079521,
+  1.0
+ ],
+ "K": [
+  0.4783897049648127,
+  0.1909531939375134,
+  0.1909531939375134,
+  0.4783897049648127
+ ],
+ "d": [
+  0.4025903730333099,
+  1.7516463932337407,
+  1.7516463932337407,
+  0.4025903730333099
+ ],
+ "phi": [
+  -0.9096651009692742,
+  -0.26804437800447434,
+  -0.26804437800447434,
+  -0.9096651009692742
+ ],
+ "L": [
+  10.604326495965628,
+  11.937004558078259,
+  10.604326495965628
+ ],
+ "lg0": 26.100974982150138
+}
+[improved_it0] mesh [386, 103, 5] = 0.20 Mcells, min cell [0.056 0.059 0.392] mm
+openEMS - fixed number of threads: 4
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0
+		hdf5   -- Version: 2.2.0
+		          compiled against: HDF5 library version: 2.2.0
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_91
+		vtk -- Version: 9.3.20231030
+		       compiled against: 9.3.20231030
+
+Create FDTD operator (compressed SSE + multi-threading)
+FDTD simulation size: 386x103x5 --> 198790.00 FDTD cells 
+FDTD timestep is: 0.00 s; Nyquist rate: 226 timesteps @12244975950.00 Hz
+Excitation signal length is: 7208 timesteps (0.00s)
+Max. number of timesteps: 400000 ( --> 55.49 * Excitation signal length)
+Create FDTD engine (compressed SSE + multi-threading)
+Warning: No primitives found in property: copper!
+Running FDTD engine... this may take a while... grab a cup of coffee?!?
+[@        4s] Timestep:         1904 || Speed:   93.3 MC/s (2.130e-03 s/TS) || Energy: ~1.38e-17 (- 0.00dB)
+[@        8s] Timestep:         3920 || Speed:   97.6 MC/s (2.037e-03 s/TS) || Energy: ~4.18e-15 (- 0.00dB)
+[@       12s] Timestep:         5880 || Speed:   96.3 MC/s (2.064e-03 s/TS) || Energy: ~3.30e-15 (- 1.03dB)
+[@       16s] Timestep:         7784 || Speed:   94.3 MC/s (2.108e-03 s/TS) || Energy: ~2.19e-15 (- 2.80dB)
+[@       20s] Timestep:         9744 || Speed:   95.2 MC/s (2.088e-03 s/TS) || Energy: ~9.51e-16 (- 6.43dB)
+[@       24s] Timestep:        11648 || Speed:   93.3 MC/s (2.130e-03 s/TS) || Energy: ~1.79e-16 (-13.67dB)
+[@       28s] Timestep:        13552 || Speed:   92.9 MC/s (2.139e-03 s/TS) || Energy: ~7.42e-17 (-17.51dB)
+[@       32s] Timestep:        15456 || Speed:   94.2 MC/s (2.109e-03 s/TS) || Energy: ~3.66e-17 (-20.57dB)
+[@       36s] Timestep:        17360 || Speed:   94.2 MC/s (2.111e-03 s/TS) || Energy: ~1.46e-17 (-24.57dB)
+[@       40s] Timestep:        19264 || Speed:   93.5 MC/s (2.126e-03 s/TS) || Energy: ~4.10e-18 (-30.09dB)
+[@       44s] Timestep:        21168 || Speed:   94.2 MC/s (2.110e-03 s/TS) || Energy: ~2.18e-18 (-32.82dB)
+[@       48s] Timestep:        23072 || Speed:   94.2 MC/s (2.110e-03 s/TS) || Energy: ~1.15e-18 (-35.61dB)
+[@       52s] Timestep:        24976 || Speed:   92.4 MC/s (2.152e-03 s/TS) || Energy: ~2.82e-19 (-41.71dB)
+RunFDTD: end-criteria of -40.00dB reached after 24976 timesteps (-41.71dB)
+Time for 24976 iterations with 198790.00 cells : 52.66 sec
+Speed: 94.29 MCells/s 
+it 0: d=[0.4026 1.7516] L=[10.6043 11.937 ]  fc=10.0100  RL20 band=9.735-10.285  RLmin(spec)=22.67  ILmax(spec)=0.48
+FINAL {'it': 0, 'd': [0.4025903730333099, 1.7516463932337407], 'L': [np.float64(10.604326495965628), np.float64(11.937004558078259)], 'f_c': 10.01, 'bw20': 0.5500000000000007, 'IL_f1': 0.45301580086801513, 'IL_f0': 0.4098858242144626, 'IL_f2': 0.44774103825227113, 'RL_f1': 22.66523672483931, 'RL_f0': 30.106634256245776, 'RL_f2': 26.222681488753775, 'IL_min': 0.3751184694882773, 'f_ILmin_GHz': 10.075, 'f3dB_lo_GHz': 9.54, 'f3dB_hi_GHz': 10.57, 'BW3dB_MHz': 1030.0, 'f0_3dB_GHz': 10.055, 'RL20_lo_GHz': 9.735, 'RL20_hi_GHz': 10.285, 'RL_min_band': 22.66523672483931, 'IL_max_band': 0.4757184551750927, 'rej_9GHz': 25.295964379534837, 'rej_11GHz': 12.161068558884995}
