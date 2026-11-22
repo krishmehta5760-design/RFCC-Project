@@ -1,6 +1,7 @@
 """Turns ../PRESENTATION_GUIDE.md into a Word file (PRESENTATION_GUIDE.docx) with the plots embedded.
-Every line that starts with "Show" gets the .png files it names inserted below it."""
-import os, re
+Every line that starts with "Show" gets the .png files it names inserted below it.
+Other files:  python make_presentation_guide_docx.py <source.md> <output.docx>"""
+import os, re, sys
 from docx import Document
 from docx.shared import Pt, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -9,6 +10,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, ".."))
 SRC = os.path.join(ROOT, "PRESENTATION_GUIDE.md")
 OUT = os.path.join(HERE, "PRESENTATION_GUIDE.docx")
+if len(sys.argv) == 3:
+    SRC, OUT = os.path.abspath(sys.argv[1]), os.path.abspath(sys.argv[2])
 PLOTS = os.path.join(ROOT, "04_Results", "plots")
 
 doc = Document()
@@ -29,7 +32,9 @@ def add_runs(par, text):
             r = par.add_run(part[1:-1]); r.font.name = "Consolas"; r.font.size = Pt(10)
             r.font.color.rgb = RGBColor(0x1F, 0x4E, 0x79)
         elif part.startswith("*") and part.endswith("*") and len(part) > 2:
-            par.add_run(part[1:-1]).italic = True
+            r = par.add_run(part[1:-1]); r.italic = True
+            if part.startswith("*["):                  # stage direction, e.g. *[Point at the plot.]*
+                r.font.color.rgb = RGBColor(0xB5, 0x65, 0x1D)
         else:
             par.add_run(part)
 
@@ -104,12 +109,16 @@ while i < len(lines):
         p = doc.add_paragraph()
         p.paragraph_format.left_indent = Cm(0.6 + 0.6*(indent >= 2))
         add_runs(p, s)
-    elif s.startswith(">"):                        # quote / formula
-        p = doc.add_paragraph()
-        p.paragraph_format.left_indent = Cm(1.0)
-        add_runs(p, s.lstrip("> ").strip())
-        for r in p.runs:
-            r.italic = True
+    elif s.startswith(">"):                        # quote: speech in the script, formula in the guide
+        q = s.lstrip("> ").strip()
+        if re.match(r"^[*-]\s+", q):
+            p = doc.add_paragraph(style="List Bullet 2"); add_runs(p, re.sub(r"^[*-]\s+", "", q))
+        else:
+            p = doc.add_paragraph(); add_runs(p, q)
+            p.paragraph_format.left_indent = Cm(1.0)
+        if "PRESENTATION_GUIDE" in os.path.basename(SRC):
+            for r in p.runs:
+                r.italic = True
     else:
         p = doc.add_paragraph(); add_runs(p, s)
     if re.sub(r"^[*-]\s+", "", s).startswith(("Show ", "Look at ")):
