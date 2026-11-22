@@ -254,7 +254,7 @@ Finished simulations are saved in `sim_data`, so this only re-creates the tables
 To redo every simulation from scratch (about 1.5 hours), delete the `sim_data` folder first. Don't do this right before the presentation.
 
 ### 5.2 Live demo – run a filter in front of the professor
-`demo_live.py` simulates one filter **from scratch**. While it runs, the window prints openEMS progress, with the "energy" falling towards −40 dB. When it finishes, it prints the IL and RL and opens a plot that draws the new result over the saved one. The two curves lie on top of each other, which shows the results are reproducible.
+`demo_live.py` simulates one filter **from scratch**. While it runs, the window prints openEMS progress, with the "energy" falling towards −40 dB. When it finishes, it prints the IL and RL and opens a plot (in the Windows image viewer) that draws the new result over the saved one. The two curves lie on top of each other, which shows the results are reproducible.
 
 | Command | What it shows | Time |
 |---|---|---|
@@ -264,7 +264,7 @@ To redo every simulation from scratch (about 1.5 hours), delete the `sim_data` f
 | `& $py demo_live.py improved` | **Our improved 4th-order filter** | ~2 min |
 | `& $py demo_live.py improved --view` | Opens the **3-D model** in the AppCSXCAD viewer (rotate with the mouse); no simulation | ~5 s |
 
-The best demo is `improved --view` (show the 3-D structure), then `improved` (run it and show the curve inside the green spec box). Close the plot window to end the script.
+The best demo is `improved --view` (show the 3-D structure), then `improved` (run it and show the curve inside the green spec box). The script ends by itself, and the plot opens in the Windows image viewer (Photos). It is also saved as `sim_data_demo/demo_<name>.png`.
 
 The demo writes only to `sim_data_demo`, which is safe to delete, and never changes the project results. The message "Warning: No primitives found in property: copper" is normal: in this model the copper layers are the domain's boundaries rather than drawn objects.
 

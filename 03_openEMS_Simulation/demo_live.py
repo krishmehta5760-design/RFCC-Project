@@ -82,4 +82,9 @@ fig.tight_layout()
 out = os.path.join(DEMO_ROOT, f"demo_{key}.png")
 fig.savefig(out, dpi=130)
 print("plot saved to", out)
-plt.show()
+if plt.get_backend().lower() == "agg":
+    # This Python has no window toolkit (no tkinter), so open the saved picture in the Windows image viewer.
+    if hasattr(os, "startfile") and not os.environ.get("MPLBACKEND"):
+        os.startfile(out)
+else:
+    plt.show()
