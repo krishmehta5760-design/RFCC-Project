@@ -116,5 +116,6 @@ while i < len(lines):
         add_figures(s)
     i += 1
 
-doc.save(OUT)
+from docx_helpers import save_docx
+save_docx(doc, OUT)
 print("saved", OUT)

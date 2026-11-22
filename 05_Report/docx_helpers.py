@@ -90,7 +90,19 @@ class Report:
         self.doc.add_page_break()
 
     def save(self, fn):
-        self.doc.save(fn)
+        save_docx(self.doc, fn)
+
+
+def save_docx(doc, fn):
+    """Save a python-docx Document. If the file is open in Word (Windows locks it), print a clear
+    message and stop this script without an error, so run_all.py still finishes."""
+    import sys
+    try:
+        doc.save(fn)
+    except PermissionError:
+        print(f"\n!! Could not overwrite {os.path.basename(fn)} because it is open in Word."
+              f"\n!! Close it in Word and run this step again. The old copy was left unchanged.\n", flush=True)
+        sys.exit(0)
 
 
 def docx_to_doc(docx_path, doc_path):
