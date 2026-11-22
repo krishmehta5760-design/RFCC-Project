@@ -6,7 +6,7 @@ This guide assumes you know nothing about the project yet. Read it in order:
 2. **Part 2** – the basic ideas, explained from zero.
 3. **Part 3** – what was done, step by step.
 4. **Part 4** – a slide-by-slide script for the presentation, with what to say.
-5. **Part 5** – how to run the project and do a live demo.
+5. **Part 5** – how to run the project and do a live demo, how to **change the design live when the professor asks** (5.4), and **how to explain the plot and the "why this frequency?" questions** (5.5).
 6. **Part 6** – questions the professor is likely to ask, with answers.
 7. **Part 7** – a one-page cheat sheet of numbers.
 
@@ -278,6 +278,152 @@ The demo writes only to `sim_data_demo`, which is safe to delete, and never chan
 | The report to submit (.doc) | `05_Report/SIW_Filter_Xband_Project_Report.doc` |
 | The base paper | `01_Base_Paper/…pdf` |
 | S-parameter files for another simulator | `04_Results/touchstone/*.s2p` |
+
+### 5.4 When the professor asks you to change something
+
+You don't edit any code. Add an option to the demo command. Each run takes about 1 minute (iris filters) or 2 minutes (post filters). The plot then shows the **original design in black** and **your changed design in colour**, and the terminal prints a table comparing the two.
+
+**Step 1 – see the current values** (instant):
+
+```powershell
+& $py demo_live.py iris3_cheby --show
+```
+
+It prints:
+
+```
+--d  (iris window widths, outside -> middle, mm): 6.5046,4.0802
+--L  (resonator lengths, outside -> middle, mm): 11.0723,12.0042
+--er = 2.33   --tand = 0.0012
+```
+
+The filter is symmetric, so you only give the values from the outside to the middle.
+* For a 3rd-order filter that is 2 sizes (outer, inner) and 2 lengths.
+* For our improved 4th-order filter it is 3 sizes and 2 lengths.
+* Use `post3_cheby` or `improved` instead of `iris3_cheby` for the post filters.
+
+**Step 2 – run with the change**, for example longer resonators:
+
+```powershell
+& $py demo_live.py iris3_cheby --L=11.6,12.6
+```
+
+**The options:**
+
+| Option | What it changes | Example |
+|---|---|---|
+| `--L=a,b` | Resonator lengths (spacing between posts or irises), mm | `--L=11.6,12.6` |
+| `--d=a,b` | Iris window widths (iris filters) or post diameters (post filters), mm | `--d=7.0,4.6` |
+| `--er=x` | Board permittivity (paper: 2.33) | `--er=2.2` |
+| `--tand=x` | Board loss tangent (paper: 0.0012) | `--tand=0.0005` |
+| `--lossless` | Switches off all losses | `--lossless` |
+
+**What happens – real results from openEMS** (paper's iris filter, original: centre 10.010 GHz, 3 dB bandwidth 660 MHz, IL 0.59 dB at 10 GHz):
+
+| Professor asks… | Type | Centre freq. | 3 dB BW | IL at 10 GHz | What it shows |
+|---|---|---|---|---|---|
+| "Make the resonators longer" | `& $py demo_live.py iris3_cheby --L=11.6,12.6` (+5 %) | 10.010 → **9.773 GHz** | 660 → 595 MHz | 0.59 → 1.34 dB | The whole filter **moves down** in frequency by 2.4 %. 10 GHz is now at its edge, so the loss there rises. |
+| "Make the iris windows wider" | `& $py demo_live.py iris3_cheby --d=7.0,4.6` | 10.010 → 9.877 GHz | 660 → **825 MHz** | 0.59 → 0.59 dB | Stronger coupling, so a **wider band**. The matching is spoiled (worst RL 12.8 → 5.5 dB), and rejection at 9 GHz drops 40 → 28 dB. |
+| "Use a different board, εr = 2.2" | `& $py demo_live.py iris3_cheby --er=2.2` | 10.010 → **10.303 GHz** | 660 → 675 MHz | 0.59 → 1.87 dB | Lower εr, so the filter **moves up** by 2.9 %, just as f ∝ 1/√εr predicts. The design must be redone for the new material. |
+| "What if there were no losses?" | `& $py demo_live.py iris3_cheby --lossless` | 10.010 → 10.008 GHz | 660 → 665 MHz | 0.59 → **0.01 dB** | The shape stays the same, and the loss almost disappears. So the 0.6 dB loss comes from the board material and the copper. |
+| "Make the posts bigger" (post filter, original 9.935 GHz, 700 MHz) | `& $py demo_live.py post3_cheby --d=0.85,2.5` | 9.935 → 10.098 GHz | 700 → **615 MHz** | 0.62 → 0.70 dB | Bigger posts mean weaker coupling, so a **narrower band** and better rejection at 9 GHz (33 → 44 dB). The frequency also rises a little, because bigger posts make the resonators act slightly shorter. Takes about 2 minutes. |
+
+**Rules of thumb to say before you press Enter** (the professor will like that you predict the result):
+1. **Longer resonators → lower frequency.** A resonator resonates when it is about half a wavelength long. A longer resonator fits a longer wavelength, and a longer wavelength is a lower frequency. About 5 % longer gives about 2.4 % lower.
+2. **Lower εr → higher frequency.** Waves travel faster in a material with lower permittivity, so the same length resonates at a higher frequency. Roughly f ∝ 1/√εr: √(2.33/2.2) = 1.029, so 10.01 → 10.30 GHz, exactly what openEMS gives.
+3. **Stronger coupling → wider bandwidth.** Wider iris windows or smaller posts let more energy pass between resonators, so the band gets wider. Narrower windows or bigger posts make it narrower. (They also shift the frequency a little, because the obstacles add their own phase to the resonators.)
+4. **Losses only change the insertion loss.** Without losses the curve shape and frequency stay the same, but S21 goes up to almost 0 dB. That shows the 0.6 dB loss comes from the material and the copper.
+5. **Any change to the paper's values spoils the matching inside the 9.75–10.25 GHz box.** The filter moves away from the box or the red ripple peaks rise. That shows the dimensions have to be calculated precisely, which is exactly why we re-designed them carefully for the improvement.
+
+**Keep values sensible**, or the result is meaningless:
+* post diameters 0.3–4 mm;
+* iris windows 3–12 mm (the guide is only 15 mm wide);
+* lengths 8–16 mm;
+* εr 2–4.
+
+Change one thing at a time so you can explain the result. If a run goes wrong, press **Ctrl+C** to stop it, then run the original command again. Changed runs are saved in `sim_data_demo` and never touch the project results.
+
+### 5.5 Explaining the plot
+
+This is the plot the demo opens, for example after `& $py demo_live.py iris3_cheby`:
+
+* **x-axis: frequency, 8 to 12 GHz.** This is the whole X-band. One openEMS run gives the answer at all 801 frequencies at once.
+* **y-axis: dB.** 0 dB at the top means "all of it". The lower the curve, the smaller the amount (−20 dB = 1 %).
+* **Blue line, S21 – what gets through.**
+  * Near the top (about −0.6 dB at 10 GHz) only between about 9.7 and 10.3 GHz. That is the **pass band**: the filter lets these frequencies through.
+  * Outside it, it drops steeply (the **skirts**) and keeps falling to −30 dB and below (the **stop band**). Those frequencies are blocked.
+* **Red line, S11 – what bounces back.**
+  * Near 0 dB outside the band: everything that is blocked is reflected back to the input, not absorbed.
+  * Inside the band it dips down. Count the dips: **3 dips = 3 resonators = 3rd-order filter** (the improved design shows 4). For the iris filter they are at 9.78, 10.005 and 10.19 GHz.
+  * Between the dips are small peaks (−15 dB and −19 dB here). These are the Chebyshev **ripple**.
+* **Light-green box:** the specified pass band, 9.75 to 10.25 GHz (10 GHz ± 250 MHz).
+* **Green dashed line at −20 dB:** the matching target. Inside the green box the red curve should stay **below** this line, meaning less than 1 % of the power is reflected.
+  * For the paper's iris filter the two ripple peaks (−15 dB and −19 dB) poke above it. That is the paper's weakness.
+  * For our improved filter the red curve stays below the line across the whole box.
+* **Black dashed/dotted lines:** the saved result from the project, or the original design when you change something. When nothing is changed they lie exactly on the coloured lines: the result is reproducible.
+* **The 3 dB points** – where the blue line has dropped 3 dB (half the power) from its maximum. For the iris filter they are at 9.68 and 10.34 GHz, so the 3 dB bandwidth is 660 MHz. It is wider than the 500 MHz spec because the spec is defined by the ripple/RL, not by the 3 dB points.
+* **The small wiggles at −40 to −50 dB** (far left of the blue line) are tiny numerical leftovers from the absorbing boundaries and the finite simulation time. They are 10 000 times below the pass-band level and do not matter.
+
+**What the terminal prints while it runs**
+
+| Text | Meaning |
+|---|---|
+| `mesh [330, 103, 5] = 0.17 Mcells` | The structure is cut into 330 × 103 × 5 small boxes (about 170 000 cells). openEMS solves Maxwell's equations in each one. |
+| `min cell 0.073 mm` | The smallest box, used around the irises and posts where the fields change quickly. |
+| `FDTD timestep 2.7e-13 s` | Each step moves time forward by 0.27 picoseconds. The step must be this small for the method to stay stable (the Courant condition). |
+| `Energy: ... (-20dB)` | How much of the pulse energy is still bouncing around inside. The simulation stops at −40 dB, when only 0.01 % is left, so nothing important is missed. |
+| `Warning: No primitives found in property: copper!` | Harmless. In this model the top and bottom copper are the boundaries of the simulation box, not drawn objects. |
+| `insertion loss / worst return loss ...` | The numbers read off the curves at the band edges and the centre. |
+
+### 5.6 The "why?" questions
+
+**Why 10 GHz?**
+* It is the specification of the base paper, so we had to use it to validate the paper.
+* It is the centre of the X-band (8–12 GHz), which is used for radar (weather, marine, air traffic) and satellite links.
+* At 10 GHz the board size is practical: the resonators are about half a guide wavelength, roughly 12 mm, so the whole filter fits on a 96 × 20 mm board.
+
+**Why a 500 MHz bandwidth (9.75–10.25 GHz)?**
+* It is also the paper's specification: 5 % of the centre frequency, a typical width for a channel filter.
+* The band edges are simply 10 GHz ± 250 MHz.
+* Narrower filters need weaker couplings and lose more power; wider ones need very strong couplings, which posts cannot provide easily. 5 % is in the comfortable range for posts and irises.
+
+**Why simulate from 8 to 12 GHz?**
+* That is the full X-band. It shows the pass band and enough of the stop band on both sides to see how well the filter rejects unwanted signals (we quote the rejection at 9 and 11 GHz).
+* The waveguide itself works only between 6.56 GHz (TE10 cut-off) and 13.1 GHz (where a second mode, TE20, appears). 8–12 GHz sits safely inside that range.
+
+**Why does nothing pass at 9 GHz if the waveguide works from 6.56 GHz?**
+The empty SIW passes everything above 6.56 GHz (the `line` demo shows this). The posts or irises turn it into a filter, and the filter blocks 9 GHz. So the blocking comes from the filter, not from the waveguide.
+
+**Why is S21 not exactly 0 dB in the pass band?**
+Some power is turned into heat in the board material (tan δ = 0.0012) and in the copper. That is the insertion loss, about 0.6 dB at 10 GHz for the 3rd-order filters (87 % of the power gets through). With `--lossless` it goes to almost 0 dB (see 5.4).
+
+**Why are there exactly 3 (or 4) dips in the red curve?**
+Each resonator gives one frequency where the filter is perfectly matched (a reflection zero). A Chebyshev filter of order n has n such zeros spread evenly across the band.
+
+**Why −20 dB as the target?**
+RL = 20 dB means only 1 % of the power is reflected. That is the usual industry requirement for filters and for most microwave components.
+
+**Why Rogers RT/Duroid 5870?**
+It is a low-loss microwave laminate (tan δ = 0.0012) with a stable εr = 2.33. FR-4, the normal cheap PCB material, has a loss about 15 times higher, which would make the filter far too lossy at 10 GHz. It is also what the paper used.
+
+**Why 1.57 mm thick?**
+It is a standard laminate thickness (62 mil). The thickness does not change the cut-off frequency (only the width does), but a thicker board has lower copper loss.
+
+**Why is the guide 14.976 mm wide?**
+That makes the SIW behave exactly like the standard WR-90 X-band waveguide (22.86 mm wide) filled with εr = 2.33: 22.86/√2.33 = 14.976 mm. It puts the cut-off at 6.56 GHz, below the X-band.
+
+**Why are the resonators 11–13 mm long?**
+A resonator resonates when its length is about half the wavelength inside the guide. At 10 GHz that is λg/2 ≈ 13 mm. Each post or iris adds a little phase shift, so the actual lengths are slightly shorter.
+
+**Why are the outer posts small and the inner ones big?**
+* The outer posts couple the filter to the input and output, which needs **strong** coupling, so they are small posts (or wide iris windows).
+* The inner posts couple one resonator to the next, which needs **weak** coupling for a narrow band, so they are big posts (or narrow windows).
+
+**Why posts and irises – what is the difference?**
+Both are "inductive" obstacles that partly reflect the wave.
+* A post is one drilled and plated hole in the middle of the guide.
+* An iris is two walls from the sides leaving a window.
+* Posts are the simplest to manufacture, and they gave a slightly wider bandwidth in our results.
 
 ---
 
