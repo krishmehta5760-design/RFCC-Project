@@ -24,7 +24,11 @@ H. Bandar and N. Türker Tokan, "Comparison of post and iris substrate integrate
 | `02_Design_Calculations/` | Analytical design script and its output |
 | `03_openEMS_Simulation/` | openEMS models; `sim_data/` holds the saved simulation results |
 | `04_Results/` | Plots, Touchstone (.s2p) files, tables |
-| `05_Report/` | Word report (.doc/.docx) and the scripts that build it |
+| `05_Report/` | Word report (.doc/.docx/.pdf) and the scripts that build it |
+| `06_Presentation/` | 10-slide deck, presentation script and slide figures |
+| `07_Thesis/` | Thesis (Word + PDF) and `make_thesis.py`, which builds it |
+| `08_Research_Paper/` | IEEE conference-format paper: LaTeX source, figures and PDF |
+| `make_submission.py` | Builds the upload package (`Desktop/SIW_Filter_Submission`, under 50 MB) |
 
 ## How to run
 Install openEMS v0.37.0 and its Python packages. Then, from `03_openEMS_Simulation`:

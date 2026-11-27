@@ -143,7 +143,7 @@ text(s, 0.8, 3.05, 11.5, 0.6, "Validating a published design in openEMS – and 
 siw_drawing(s, 0.8, 4.0, 11.75, 1.25)
 text(s, 0.8, 5.35, 11.75, 0.35, "Our improved 4th-order filter: 5 metal posts inside a waveguide formed by two rows of vias",
      size=12, color=ICE)
-text(s, 0.8, 6.0, 11.75, 0.45, "[Member 1 – Name, Roll No.]     ·     [Member 2 – Name, Roll No.]", size=18, color=WHITE)
+text(s, 0.8, 6.0, 11.75, 0.45, "Krish Mehta (241EC224)   ·   Vishva Chavada (241EC212)   ·   NITK Surathkal", size=18, color=WHITE)
 text(s, 0.8, 6.5, 11.75, 0.4, "Base paper: H. Bandar & N. Türker Tokan, Sigma J. Eng. Nat. Sci. 40(1), 45–56, 2022",
      size=12, color=ICE)
 notes(s, """[Member 1 · 20 s]
@@ -339,7 +339,7 @@ text(s, 0.6, 6.15, 12.1, 0.4, [[("If anything fails: ", {"bold": True, "color": 
      ("press Ctrl+C and show the saved plots in 04_Results/plots instead.", {})]], size=13, color=ICE)
 text(s, 0.6, 5.55, 12.1, 0.5,
      [[("Before class: ", {"bold": True, "color": COPPER}),
-       ('cd "...\\SIW_Filter_Xband_openEMS\\03_openEMS_Simulation"   then   '
+       ('cd "$HOME\\Desktop\\SIW_Filter_Xband_openEMS\\03_openEMS_Simulation"   then   '
         '$py = "C:\\Users\\KRISH MEHTA\\openEMS_install\\py313\\tools\\python.exe"', {"font": MONO, "size": 11})]],
      size=13, color=ICE)
 page(s, 9, dark=True)
